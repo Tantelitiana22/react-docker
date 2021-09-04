@@ -5,7 +5,7 @@ services:
   -docker
 
 before_install:
-  - docker buid -t andri/react-docker -f Dockerfile.dev .
+  - docker build -t andri/react-docker -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true andri/react-docker npm run test
